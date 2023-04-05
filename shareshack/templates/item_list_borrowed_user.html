@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  {% if item_list %}
+  <h1>Your checked out items:</h1>
+  <ul>
+    {% for item in item_list %}
+    <li class="{% if item.is_overdue %}text-danger{% endif %}">
+      <a href="{% url 'item-detail' item.pk %}">{{item.writtenId}}</a>
+       | {{item.name}} | Due back: {{ item.due_back }} | {% if perms.shareshack.can_mark_returned %}- <a href="{% url 'renew-item-librarian' item.pk %}">Renew</a>  {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>You have no checked out items.</p>
+  {% endif %}
+{% endblock %}

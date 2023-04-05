@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+  <h1> {{ department.name }}</h1>
+  <ul>
+  {% if department.item_set.all %} 
+    {% for item in department.item_set.all %}
+    <li><img src="{{item.image}}" alt="{{item.image}}">{{ item.name }} | <a href="{{ item.get_absolute_url }}">{{ item.writtenId }}</a> | {{item.get_status_display}}</li> 
+    <br>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no items here.</p>
+  {% endif %}
+{% endblock %}

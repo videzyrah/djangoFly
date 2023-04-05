@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>{{ item.writtenId }} | {{ item.name }}</h1>
+  <img src={{item.image}}>
+  <p><strong>Condition log:</strong> {{ item.condition }}</p>
+  <p><strong>Donor:</strong> {{ item.donor }}</p>
+  <p><strong>Department:</strong> {{ item.department }}</p>
+ 
+  <div style="margin-top:20px">
+    <h4><i>Availability</i></h4>
+    {% if item.status != 'a' %}
+        <p><strong>On loan to:</strong> {{ item.borrower }}</p>
+        <p><strong>Due to be returned:</strong> {{ item.due_back }}</p>
+        <a href ="{% url 'librarian-transaction' item.id %}">Mark this item as returned</a>
+    {% endif %}
+    {% if item.status == 'a' %}
+        <p><strong>Available!</strong></p>
+        {% if perms.shareshack.can_mark_returned %}
+        <a href ="{% url 'librarian-transaction' item.id %}">Loan out this item</a>
+        {% endif %}
+    {% endif %}
+    
+  </div>
+{% endblock %}

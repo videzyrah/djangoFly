@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Renew: {{ item_instance.name }}</h1>
+  <p>Borrower: {{ item_instance.borrower }}</p>
+  {% if item_instance.is_overdue %}
+  <p{% if item_instance.is_overdue %} class="text-danger"{% endif %}>Overdue since: {{ item_instance.due_back }}</p>
+  {% else %}
+  <p>Current due date: {{ item_instance.due_back }}</p>
+  {% endif %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}

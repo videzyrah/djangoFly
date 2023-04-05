@@ -1,0 +1,47 @@
+{% extends "base_generic.html" %}
+{% load static %} 
+
+{% block content %}
+
+  <h1 style="color:rgb(5, 53, 23);text-align:center;">SHARE SHACK</h1>
+  <p>Welcome to Share Shack; a "Library of Things" inventory management system.</p>
+  <span><i>Don't have room for tools you rarely use?</i> Borrow/Donate with us!</span>
+  
+  
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="https://www.gardeningknowhow.com/wp-content/uploads/2017/05/wheelbarrow-400x267.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Wheel barrows</h5>
+        <p class="card-text">Great for invasive species removal volunteer parties.</p>
+        <a href="department/2" class="btn btn-primary">Browse Landscaping</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://www.thespruce.com/thmb/hmff0JAyY3DXghdejLlvGjK6xvg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/SPR_OVERALLBEAUTY_4.jpg-4f883e8f21d84113a917f475e6386077.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Ladders</h5>
+        <p class="card-text">Use at your own risk!</p>
+        <a href="department/1" class="btn btn-primary">Browse General Tools</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.ebayimg.com/images/g/mo8AAOSwyQlg9tba/s-l640.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Stock Pots</h5>
+        <p class="card-text">Feed the whole collective.</p>
+        <a href="department/5" class="btn btn-primary">Browse Catering </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+  <h2>Dynamic content</h2>
+  <p>Test context from views.py passing into template </p>
+  <ul>
+    <li><strong>String 1:</strong> {{ string1 }}</li>
+    <li><strong>String 2:</strong> {{ string2 }}</li>
+  </ul>
+  -->
+
+{% endblock %}

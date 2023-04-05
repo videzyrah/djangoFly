@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+{% block title %} Check Out{% endblock %}
+
+{%block content%}
+<center><h3>{{item.writtenId}} | {{item.name }}</h3></center>
+<div class="about">
+  {% if errors %}
+  {{ errors }}
+  {% endif %}
+  <form method = 'post'>
+    {% csrf_token %}
+    <table>
+    {{ form.as_table}}
+    </table>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+{%endblock%}

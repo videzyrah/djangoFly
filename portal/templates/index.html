@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% extends "base_scaffold.html" %}
+{% load static %} 
+
+
+{% block content %}
+<h1>Greg's Personal Project Portal</h1>
+  <p id="inPageNav">
+    <a href="#coding">Coding |</a>
+    <a href="#cooking">Cooking |</a>
+    <a href="#music">Music |</a>
+    <a href="#maintenance">Maintenance |</a> 
+  </p>
+<section id="coding">
+    <h2>Websites and the Whatnot</h2>
+    <article>
+      <a href = https://videzyrah.github.io/gainesville-plant-market/><h4> Online Local Farmer's Market</h4></a>
+      <p>A listing of (edible) plants that can be grown in Gainesville, Florida matched with persons that grow them for sale or barter.</p>
+    </article>
+    <article>
+      <a href="/shareshack"><h4>ShareShack</h4></a>
+      <p>I read that <a href="http://www.repurposeproject.org/">The Repurpose Project</a> was interested in hosting a <a href="https://en.wikipedia.org/wiki/Tool_library">tool library</a>.
+        So; I prototyped an invenventory management system for that.
+        Written using the Django (python) framework.  The <a href="https://github.com/videzyrah/djangoBulk/tree/master/shareShack">code</a> works perfectly fine, implementing it into a real world setting is a whole other ballgame.
+      </p>
+      
+    </article>
+    <article>
+      <a href="/samplepacks"><h4>Greg Stull Sound Lab</h4></a>
+      <p>A webpage where I provide sound sample content for use in software such as Ableton Live or FLStudio (Fruity Loops).</p>
+    </article>
+
+    <!-- FLASK <article>
+      <a href="https://chimes"><h4>Wind Chime Node finder</h4></a>
+      <p>A simple python/Flask based web app for calculating the node points on windchimes, xylophones, idiophones, etc. This means where to drill holes or hold them</p>
+    </article>
+    -->
+
+    <article>
+      <a href="https://play.unity.com/u/videzyrah"><h4>Game Development (Unity)</h4></a>
+      <p>A recycling quiz prototype, multi-level pachinko style game, and percussion rompler. 
+        It turned out the City of Gainesville <a href ="https://cityofgainesvillefl.recycle.game/">already had a recycling quiz</a>. So I encourage you to play that.</p> 
+    </article>
+
+    <article>
+      <a href ="https://github.com/videzyrah/jupyternotebooks/blob/master/PortfolioPieChartGenerator.ipynb"><h4>Data Analysis and Visualization</h4></a>
+      <p>I like turning data into charts, but I've only ever had one person ask me to do that - to generate automated overviews of how evenly diversified their investment portfolio is.</p>
+    </article>
+
+    <article>
+      <a href="/appScriptScreenShot"><h4>Google Workspace Automation</h4></a>
+      <p>I've worked with a small business owner on a project that included using AppScript to auto-fill forms and 
+         emailing .pdf invoices/estimates upon their submission.  This enabled tasks that were usually done in an office setting to 
+         be done in the field on a cell phone and prevented the cost of a Quickbooks subscription.  We are hoping to consult other
+         small businesses on similar setups.
+      </p>
+    </article>
+
+  </section>
+
+  <section id="startUpWeekend">
+    <h2>Startup Weekend Pitches and Participation</h2>
+    <i style="font-size: 12px"><a href= "https://www.techstars.com/communities/startup-weekend">Startup weekend</a> is a SharkTank like business idea competition.</i>
+    <article>
+      <h4>Surviving Single / Grocery Cost Estimator</h4>
+      <p>-February 2017 competion</p>
+      <p>Pitch: "Surviving Single." I was unable to gather teammates to work on the idea of a meal planning/recipe site for single people.</p>
+      <p>Participation: The team I joined instead was hoping to start a brew pub.  I enjoyed brainstorming with them.</p>
+      <p>Aftermath: I think at least two more brew pubs have opened up since then. I haven't given up on "Surviving Single".  
+        My original plan to have unit prices of ingredients as parameters in the recipe database seems undoable due to price fluctuations. So I am considering taking a simpler approach (i.e. a blog, lol).</p>
+    </article>
+
+    <article>
+      <h4>Double ended clips</h4>
+      <p>-October  2018 competion</p>
+      <p>Pitch: I glued together two wooden clothes pins; hoped to get some marketing people to make a funny sales video like shamwow. </p>
+      <p>Participation: I joined a team attempting to create a collaboration matching service for persons doing academic research sorts of things.  The team finished in second place.</p>
+      <p>Aftermath:I eventually figured out how to 3D print some parts. But you can buy clothespins at walmart for $0.02 each. i.e. not a monetizable idea.</p>
+    </article>
+
+    <article>
+      <h4>Tuesdays are Terrible</h4>
+      <p>-May 2019 competition</p>
+      <p>Pitch: I tried to pitch something even funnier that maybe some people would like to spend a weekend working on. I.e. a marketing app that lists restaurants that have Taco Tuesday night. So, my pitch got the most laughs but not a team.</p>
+      <p>Participation: I joined a team that was hoping to develop a system to match people with vacant urban land with people that would use said land to grow vegetables.</p>
+      <p>Aftermath: funny enough (I found out later); T-Mobile promotes affiliate businesses on Tuesdays and calls it "T-mobile Tuesdays."  Also I attempted to develop a hypothetical GUI for project management overview of coordinated community planting of vegetables on codepen: </p>
+      <a href="https://codepen.io/theothergregstull/pen/xobwPv">An attempt to prototype a gui for displaying possible bartering connections</a>
+    </article>
+  </section>
+
+  <a name="cooking"></a>
+
+  <section id="cooking">
+    <h2>Food Preparation (Cooking / Meal Planning)</h2>
+    <p>One of the main struggles in my life has been figuring out how to feed myself day to day.
+      I hope to help others in the same boat by creating recipes and/or meal plans
+      optimized for single people.  I got a mini InstantPot for christmas and I am really enjoying
+      figuring out new recipes that I consider better than what came in the provided recipe book. 
+      Thus; <a href ="https://teal-sundae-46fb89.netlify.app/">Meals for Myself: Recipes, Reviews, & Research</a> 
+        is a backburner work in progress blog dedicated to budget conscious solutions for those of us shopping and cooking for one.</p>
+    </p>
+  </section>
+
+  <a name="music"></a>
+  <h2>Music</h2>
+  <section id="music">  
+    <article class="backstory">
+      <p>I have played drumset for a few "local" bands but I have also tried to branch out creatively from that.
+      This includes studying "world" percussion and testing the layering of various sounds.
+      I seem to prefer engaging in collaborative projects rather than dealing with decision processes alone.
+      Similarly, when acting alone I tend to attempt to outline ways for others to be creative (or to colaborate with me).</p>
+    </article>
+    <p>Thus; here are a few videos I have made in that vain:</p>
+  <div class ="youtube-wrapper">
+    <div class = "three">
+      <p class="center">"Repurposed Percussion" Drum Circle at Barcamp</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1PZIxYYIAhA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class = "vid-holder">
+      <p class="center">Demo/Promo for the Harmony Park instruments installed at Hogtown Creek Headwaters</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/bNjDnxC--b8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class = "vid-holder">
+      <p class="center">Four Layered percussion piece ideas</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/3Pf0BlNbtq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class = "four">
+      <p class="center">Drum triggers, piezos, DIY ekit (fail?), and converting Rock Band pads:</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/EPOF0C-PpsQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class = "five">
+      <p class="center">Cajon (as guitar accompaniement)</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SqKfRCv1VYc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+</section>
+
+  
+  
+  
+  
+  
+
+{% endblock %}
